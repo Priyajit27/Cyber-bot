@@ -1,0 +1,101 @@
+:root{
+    --dark: #374151 ;
+    --darker: #1F2937 ;
+    --darkest:  rgb(26, 22, 22);
+    --light:rgb(242, 234, 234);
+    --pink:   rgb(230, 133, 149);
+    --violet: rgb(193, 103, 237);
+    }
+    
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: var(--darker);
+    }
+    
+.shield {
+  margin: 5% auto; /* Center the shield */
+  position: relative;
+  background: radial-gradient(#122469 0%, #122469 35%, #a41b22 0%, #a41b22 50%, #FFFFFF 0%, #FFFFFF 60%, #a41b22 0%, #a41b22 90%);
+     border-radius: 100%;
+     width: 480px;
+     height: 480px;
+     animation-name: turn;
+     animation-duration: 5s;     	
+     animation-timing-function: ease-out;
+}
+.shield:after {    	
+     position: absolute;
+     top: 200px;
+     left: 140px;     	
+     content: '';
+     display: block;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid white;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);            
+  
+}
+
+.shield:before {    	
+    position: absolute;
+    display: block;
+    top: 200px;
+    left: 140px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;		
+    transform: rotate(-35deg);
+    content: '';
+}
+.wip {    	
+    position: absolute;
+    top: 137px;
+    left: 209px;
+    width: 0px;
+    height: 0px;
+    border-right: 29px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 29px solid transparent;		
+    z-index: 999
+}
+@keyframes turn {
+    from {
+        transform: rotate(0);
+        box-shadow: 6px 8px 5px 15px #333333;
+    }
+    to {
+        transform: rotate(720deg);
+        box-shadow: 0px 0px 4px 0px #111111;
+    }
+}
+.hello{
+    width: 22rem;
+    height: 22rem;
+    position: relative;
+    animation:mymove 5s infinite ;
+    
+}
+@keyframes mymove {
+    from {top: 0px;}
+    50% {top: 100px !important;} /* ignored */
+    to {top: 200px;}
+  }
+.hello1{
+    width: 22rem;
+    height: 22rem;
+    position: relative;
+    
+    animation:mymove 5s infinite ;
+    
+}
+@keyframes mymove {
+    from {top: 0px;}
+    50% {top: 100px !important;} /* ignored */
+    to {top: 200px;}
+  }
